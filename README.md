@@ -33,7 +33,7 @@ add name=vpnuser password="YourStrongPassword123!" service=ovpn profile=ovpn-pro
 /interface ovpn-server server
 add name=ovpn-server1 disabled=no port=1194 protocol=udp mode=ip certificate=ovpn-server auth=sha256 cipher=aes256-cbc require-client-certificate=
 yes
-set [find name=ovpn-server1] push-routes="192.168.5.0 255.255.255.0"                 #[local IP Address]
+set [find name=ovpn-server1] push-routes="192.168.1.0 255.255.255.0"                 #[local IP Address]
 ```
 ## Firewall rull
 ```bash 
