@@ -54,7 +54,7 @@ sign ovpn-client1-template ca=ovpn-ca name=ovpn-client1
 export-certificate ovpn-ca
 export-certificate ovpn-client1
 
-/certificate export-certificate ovpn-client1 export-passphrase="MySecureVPN@2026"
+/certificate export-certificate ovpn-client1 export-passphrase="MySecureVPN@2026"   #[Replace any passphrase that you want]
 ```
 ## Export cert & key files
 ```bash
