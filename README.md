@@ -33,7 +33,7 @@ add name=vpnuser password="YourStrongPassword123!" service=ovpn profile=ovpn-pro
 /interface ovpn-server server
 add name=ovpn-server1 disabled=no port=1194 protocol=udp mode=ip certificate=ovpn-server auth=sha256 cipher=aes256-cbc require-client-certificate=
 yes
-set [find name=ovpn-server1] push-routes="192.168.5.0 255.255.255.0"                           [local IP Address]
+set [find name=ovpn-server1] push-routes="192.168.5.0 255.255.255.0"                 #[local IP Address]
 ```
 ## Firewall rull
 ```bash 
@@ -60,7 +60,7 @@ export-certificate ovpn-client1
 ```bash
 /interface/ovpn-server/server/export-client-configuration \
 server=ovpn-server1 \
-server-address=YOUR_PUBLIC_IP \
+server-address=YOUR_PUBLIC_IP \              #[Replace youre public ip address]
 ca-certificate=cert_export_ovpn-ca.crt \
 client-certificate=cert_export_ovpn-client1.crt \
 client-cert-key=cert_export_ovpn-client1.key
